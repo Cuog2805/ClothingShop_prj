@@ -1,0 +1,28 @@
+﻿@model String
+
+@{
+    ViewBag.Title = "Hồ sơ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container profile_section_container">
+    <div class="row">
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs d-flex flex-row align-items-center">
+            <ul>
+                <li><a href="~/Home/Index">Home</a></li>
+                <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>@ViewBag.Title</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-2 profile_section clearfix">
+            @{ Html.RenderAction("Slider", "User", Model);}
+        </div>
+
+        <div class="col-md-10" id="profileContainer">
+            @*Chức năng người dùng*@
+            @{ Html.RenderAction(Model, "User");}
+        </div>
+    </div>
+</div>

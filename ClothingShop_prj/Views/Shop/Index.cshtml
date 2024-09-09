@@ -1,0 +1,35 @@
+﻿@*Shop*@
+
+@model ClothingShop_prj.Controllers.ShopController.Link
+@{
+    ViewBag.Title = "Shop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container product_section_container">
+    <div class="row">
+        <div class="col product_section clearfix">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs d-flex flex-row align-items-center">
+                <ul>
+                    <li><a href="~/Home/Index">Home</a></li>
+                    <li><a href="~/Shop/Index?section=Products">/&ensp;@ViewBag.Title</a></li>
+                    <li><a href="~/Shop/Index?section=@Model.Section">/&ensp;@Model.Section</a></li>
+                    @if (Model.Category != null)
+                    {
+                        <li><a href="~/Shop/Index?section=@Model.Section&category=@Model.Category">/&ensp;@Model.Category</a></li>
+                    }
+                    @if (Model.Type != null)
+                    {
+                        <li><a href="~/Shop/Index?section=@Model.Section&type=@Model.Type">/&ensp;@Model.Type</a></li>
+                    }
+                </ul>
+            </div>
+            @{ Html.RenderAction("Slider", "Shop", new { link = Model});}
+            <div class="row">
+                @*Danh sách sản phẩm*@
+                @{ Html.RenderAction(Model.Section, "Shop", new { link = Model }); }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,239 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container product_section_container">
+    <div class="row pt-4">
+        <div class="col-lg-7">
+            @*hình ảnh slide*@
+            <div class="row">
+                <div class="col-lg-3">
+                    <img height="150" src="~/Views_assets/images/product_1.png" alt="">
+                    <img height="150" src="~/Views_assets/images/product_1.png" alt="">
+                    <img height="150" src="~/Views_assets/images/product_1.png" alt="">
+                </div>
+                <div class="col-lg-9">
+                    <img class="border-dark" height="500" src="~/Views_assets/images/product_1.png" alt="">
+                </div>
+            </div>
+            @*mô tả sản phẩm*@
+            <div class="product_describe_title">
+                <h3>Mô tả</h3>
+                <p>Mã sản phẩm: 2805</p>
+            </div>
+            <div class="product_describe_collapse">
+                <a class="" data-toggle="collapse" href="#detail_describe">
+                    <div class="describe_collapse_title p-0 row">
+                        Chi tiết
+                        <i class="fa fa-arrow-down close"></i>
+                    </div>
+                </a>
+                <div class="detail_describe_collapse collapse" id="detail_describe">
+                    - Chất vải 'AIRism' mịn màng trông như cotton.
+                </div>
+            </div>
+
+            <div class="product_describe_collapse">
+                <a class="" data-toggle="collapse" href="#material_describe">
+                    <div class="describe_collapse_title p-0 row">
+                        Chất liệu
+                        <i class="fa fa-arrow-down close"></i>
+                    </div>
+                </a>
+                <div class="detail_describe_collapse collapse" id="material_describe">
+                    53% Bông, 47% Polyeste ( 30% Sử Dụng Sợi Polyeste Tái Chế )
+                </div>
+            </div>
+
+            @*đánh giá sản phẩm*@
+            <div class="product_rating_title">
+                <h3>Đánh giá</h3>
+                <div class="product_rate">
+                    <ul class="star_rating">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                    </ul>
+                    <span class="count_rating">(2)</span>
+                </div>
+            </div>
+            <div class="product_rating_total">
+                <h3 class="pb-1">Đánh giá của khách hàng</h3>
+                <div class="product_rate">
+                    <ul class="star_rating">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    </ul>
+                    <span class="count_rating">(2)</span>
+                </div>
+                <div class="product_rate">
+                    <ul class="star_rating">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                    </ul>
+                    <span class="count_rating">(2)</span>
+                </div>
+                <div class="product_rate">
+                    <ul class="star_rating">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                    </ul>
+                    <span class="count_rating">(2)</span>
+                </div>
+                <div class="product_rate">
+                    <ul class="star_rating">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                    </ul>
+                    <span class="count_rating">(2)</span>
+                </div>
+                <div class="product_rate">
+                    <ul class="star_rating">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                    </ul>
+                    <span class="count_rating">(2)</span>
+                </div>
+                <a class="add_review" href="#">THÊM ĐÁNH GIÁ </a>
+            </div>
+            <div class="user_review">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3>Comfortable with Affordable price</h3>
+                    <p>06/09/2024</p>
+                </div>
+                <div class="product_rate">
+                    <ul class="star_rating">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                    </ul>
+                </div>
+                <div class="user_review_size mt-2">
+                    Kích cỡ đã mua: XL
+                </div>
+                <div class="user_review_comment">
+                    The airism sleeveless shirt is so comfortable. It is suitable for Malaysia weather. You must have it!
+                </div>
+                <div class="user_info mt-2">
+                    <b>Young · Nữ · Kuala Lumpur</b>
+                </div>
+            </div>
+            <div class="user_review">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3>Comfortable with Affordable price</h3>
+                    <p>06/09/2024</p>
+                </div>
+                <div class="product_rate">
+                    <ul class="star_rating">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                    </ul>
+                </div>
+                <div class="user_review_size mt-2">
+                    Kích cỡ đã mua: XL
+                </div>
+                <div class="user_review_comment">
+                    The airism sleeveless shirt is so comfortable. It is suitable for Malaysia weather. You must have it!
+                </div>
+                <div class="user_info mt-2">
+                    <b>Young · Nữ · Kuala Lumpur</b>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-5">
+            <div class="product_details">
+                <div class="product_details_title">
+                    <h2>AIRism Cotton Áo Thun Không Tay</h2>
+                </div>
+                <div class="product_info row">
+                    <div class="product_price col-8">
+                        <span class="price_original">391.000 VND</span>
+                        <span class="price_discount">195.000 VND</span>
+                    </div>
+                    @*<div class="product_price col-8">
+                            <span class="price_current">391.000 VND</span>
+                        </div>*@
+                    <div class="product_rate col-4">
+                        <ul class="star_rating">
+                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        </ul>
+                        <span class="count_rating">(2)</span>
+                    </div>
+                </div>
+                <div class="product_detail_selection">
+                    <div class="selection_title">MÀU SẮC: </div>
+                    <div class="product_detail_color row">
+                        <a class="mt-2 mr-2 p-0" href="#">
+                            <div class="color_selection color-green"></div>
+                        </a>
+                        <a class="mt-2 mr-2 p-0" href="#">
+                            <div class="color_selection color-pink"></div>
+                        </a>
+                        <a class="mt-2 mr-2 p-0" href="#">
+                            <div class="color_selection color-brown"></div>
+                        </a>
+                        <a class="mt-2 mr-2 p-0" href="#">
+                            <div class="color_selection color-beige"></div>
+                        </a>
+
+                    </div>
+                    <div class="selection_title">KÍCH CỠ: </div>
+                    <div class="product_detail_size row">
+                        <a class="mt-2 mr-2 p-0" href="#">
+                            <div class="color_selection">S</div>
+                        </a>
+                        <a class="mt-2 mr-2 p-0" href="#">
+                            <div class="color_selection">XL</div>
+                        </a>
+                        <a class="mt-2 mr-2 p-0" href="#">
+                            <div class="color_selection">L</div>
+                        </a>
+                    </div>
+                    <div class="selection_title">SỐ LƯỢNG: </div>
+                    <div class="product_detail_quantity row">
+                        <select class="quantity_selection">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="product_detail_feature col">
+                        <a class="add_to_cart" href="#">THÊM VÀO GIỎ HÀNG</a>
+                        <a class="add_to_wishlist" href="#">THÊM VÀO DANH SÁCH MONG MUỐN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

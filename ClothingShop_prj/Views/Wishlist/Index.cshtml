@@ -1,0 +1,54 @@
+﻿@*Wishlist*@
+
+@{
+    ViewBag.Title = "Yêu thích";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="wishlist_section">
+    <div class="wishlist_section_col">
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs d-flex flex-row align-items-center">
+            <ul>
+                <li><a href="~/Home/Index">Home</a></li>
+                <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>@ViewBag.Title</a></li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <table class="table table-light table-borderless table-hover text-center mb-0" id="cart_table">
+                <thead class="cart_table_head">
+                    <tr>
+                        <th></th>
+                        <th class="col text-justify">Sản phẩm</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="align-middle">
+                    <tr>
+                        <td>
+                            <div class="wishlist_product_image align">
+                                <img src="~/Views_assets/images/product_1.png" alt="" style="width: 200px;">
+                                <div class="wishlist_heart d-flex flex-column align-items-center">
+                                    <a><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col text-justify">
+                            <h3>Product Name</h3>
+                            <h6>Màu sắc: </h6>
+                            <h6>Kích thước: </h6>
+                            <h4>Giá: $150</h4>
+                        </td>
+                        <td>
+                            <button class="btn btn-check">Bỏ yêu thích</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+

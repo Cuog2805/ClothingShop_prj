@@ -83,3 +83,5 @@ C:\Users\cuog2\source\repos\ClothingShop_prj\ClothingShop_prj\obj\Debug\Clothing
 C:\Users\cuog2\source\repos\ClothingShop_prj\ClothingShop_prj\obj\Debug\ClothingShop_prj.pdb
 C:\Users\cuog2\source\repos\ClothingShop_prj\ClothingShop_prj\obj\Debug\ClothingShop_prj.Migrations.CreateModel.resources
 C:\Users\cuog2\source\repos\ClothingShop_prj\ClothingShop_prj\obj\Debug\ClothingShop_prj.csproj.GenerateResource.cache
+C:\Users\cuog2\source\repos\ClothingShop_prj\ClothingShop_prj\obj\Debug\ClothingShop_prj.Migrations.CreateUserObject.resources
+C:\Users\cuog2\source\repos\ClothingShop_prj\ClothingShop_prj\obj\Debug\ClothingShop_prj.Migrations.CreateRelationshipUserObjectandType.resources

@@ -12,6 +12,7 @@ namespace ClothingShop_prj.Models
         public DbSet<Size> Sizes { get; set; }
         public DbSet<CategoryItem> CategoryItems { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<UserObject> UserObjects { get; set; }
         public DbSet<Type> Types { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Address> Address { get; set; }
@@ -35,6 +36,7 @@ namespace ClothingShop_prj.Models
             modelBuilder.Entity<Size>().HasKey(s => s.SizeID);
             modelBuilder.Entity<CategoryItem>().HasKey(ci => ci.CategoryItemID);
             modelBuilder.Entity<Category>().HasKey(c => c.CategoryID);
+            modelBuilder.Entity<UserObject>().HasKey(u => u.UserOjectID);
             modelBuilder.Entity<Type>().HasKey(t => t.TypeID);
 
             modelBuilder.Entity<Customer>().HasKey(c => c.CustomerID);
@@ -89,6 +91,19 @@ namespace ClothingShop_prj.Models
                 .HasRequired(ci => ci.Category)
                 .WithMany(c => c.CategorieItems)
                 .Map(m => m.MapKey("CategoryID"));
+
+            //userobject-category, 1-n
+            modelBuilder.Entity<Category>()
+                .HasRequired(c => c.UserObject)
+                .WithMany(u => u.Categories)
+                .Map(m => m.MapKey("UserOjectID"));
+
+            //userobject-type, 1-n
+            modelBuilder.Entity<Type>()
+                .HasRequired(t => t.UserObject)
+                .WithMany(u => u.Types)
+                .Map(m => m.MapKey("UserObjectID"));
+
             //product-type, n-n
             modelBuilder.Entity<Product>()
                 .HasMany(p => p.Types)

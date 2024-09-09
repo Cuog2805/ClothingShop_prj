@@ -1,0 +1,86 @@
+﻿<!-- Sidebar Shop -->
+
+@model ClothingShop_prj.Controllers.ShopController.Filter
+
+<div class="sidebar">
+    <div class="sidebar_section">
+        <div class="sidebar_title">
+            <h5>@Model.userObj.Name</h5>
+        </div>
+        <ul class="sidebar_categories">
+            @foreach (var category in Model.userObj.Categories)
+            {
+                <li>
+                    <a data-toggle="collapse" href="#@category.CategoryID">@category.Name</a>
+                    <div class="collapse m-2" id="@category.CategoryID">
+                        <ul>
+                            @foreach (var item in category.CategorieItems)
+                            {
+                                <li>
+                                    <a href="~/Shop/Index?section=@Model.userObj.Name&category=@item.Name">@item.Name</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+
+    <!-- Price, Color, Size -->
+    <div class="sidebar_section">
+        <ul class="sidebar_categories">
+            <li>
+                <!-- Price -->
+                <a data-toggle="collapse" href="#price_selection">Giá</a>
+                <div class="filter collapse row ml-1" id="price_selection">
+                    <ul>
+                        <li>
+                            <a href="#">Dưới 199.000 vnd</a>
+                        </li>
+                        <li>
+                            <a href="#">199.000 vnd - 299.000 vnd</a>
+                        </li>
+                        <li>
+                            <a href="#">299.000 vnd - 399.000 vnd</a>
+                        </li>
+                        <li>
+                            <a href="#">399.000 vnd - 499.000 vnd</a>
+                        </li>
+                        <li>
+                            <a href="#">Lớn hơn 499.000 vnd</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- Color -->
+                <a data-toggle="collapse" href="#color_selection">Màu sắc</a>
+                <div class="filter collapse row ml-1" id="color_selection">
+                    @foreach (var color in Model.Colors)
+                    {
+                        <div class="col-2 p-0">
+                            <a class="m-0 p-0" href="#">
+                                <div class="color_selection color-@color.Hue.ToLower()"></div>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </li>
+            <li>
+                <!-- Size -->
+                <a data-toggle="collapse" href="#size_selection">Kích cỡ</a>
+                <div class="filter collapse row ml-1" id="size_selection">
+                    @foreach (var size in Model.Sizes)
+                    {
+                        <div class="col-2 p-0">
+                            <a class="m-0 p-0" href="#">
+                                <div class="color_selection">@size.Amplitude</div>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
